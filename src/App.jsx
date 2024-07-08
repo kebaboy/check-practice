@@ -1,32 +1,22 @@
-
-import './App.css'
-import PopExit from './components/pop-exit/pop-exit'
-import PopNewCard from './components/popNewCard/PopNewCard'
-import PopBrowse from './components/Pop-browe/pop-browse'
-import Header from './components/header/header'
-import Main from './components/main/main'
+import "./App.css";
+import PopExit from "./components/popups/PopUser/PopUser";
+import PopNewCard from "./components/popups/PopNewCard/PopNewCard";
+import PopBrowse from "./components/popups/PopBrowse/PopBrowse";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
 function App() {
-
-  return (
-    <>
-       <div className="wrapper">
-		
-    <PopExit/>
-		<PopNewCard/>
-		<PopBrowse/>
-		<Header/>
-		<Main/>
-
-    
-
-    </div>
-
-	
-
-    <script src="js/script.js"></script>
-      
-    </>
-  )
+    return (
+        <>
+            <div className='wrapper'>
+                <PopExit />
+                <PopNewCard />
+                <PopBrowse />
+                <Header />
+                <Main />
+            </div>
+            <script src='js/script.js'></script>
+        </>
+    );
 }
 
-export default App
+export default App;
