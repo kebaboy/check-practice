@@ -1,15 +1,35 @@
 import "../../App.css";
 import Column from "../Column/Column";
-import {Card} from "../Card/Card";
+import { Card } from "../Card/Card";
 
-function Main() {
+const statusList = [
+    "Без статуса",
+    "Нужно сделать",
+    "В работе",
+    "Тестирование",
+    "Готово",
+];
+
+function Main({ cards, isLoading }) {
     return (
         <>
             <main className='main'>
                 <div className='container'>
                     <div className='main__block'>
-                        <div className='main__content'>
-                            <Column title={'Без статуса'} >
+                        {isLoading ? (
+                            <p>Данные загружаются</p>
+                        ) : (
+                            <div className='main__content'>
+                                {statusList.map((status) => (
+                                    <Column
+                                        key={status}
+                                        title={status}
+                                        cards={cards.filter(
+                                            (card) => card.status === status
+                                        )}
+                                    />
+                                ))}
+                                {/* <Column title={'Без статуса'} >
                                 <Card theme={'Раздел'} title='Название задачи' date='12.12.2022' />
                             </Column>
                             <Column title={'Нужно сделать'} >
@@ -23,9 +43,9 @@ function Main() {
                             </Column>
                             <Column title={'Готово'} >
                                 <Card theme={'Раздел'} title='Название задачи' date='12.12.2022' />
-                            </Column>
-                            
-                            {/* <div className='main__column'>
+                            </Column> */}
+
+                                {/* <div className='main__column'>
                                 <div className='column__title'>
                                     <p>Нужно сделать</p>
                                 </div>
@@ -433,7 +453,8 @@ function Main() {
                                     </div>
                                 </div>
                             </div> */}
-                        </div>
+                            </div>
+                        )}
                     </div>
                 </div>
             </main>

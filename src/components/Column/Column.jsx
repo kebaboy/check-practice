@@ -1,13 +1,15 @@
 import "../../App.css";
+import { cardList } from "../../data";
+import { Card } from "../Card/Card";
 
-function Column({ title, children }) {
+function Column({ title, cards }) {
     return (
         <div className='main__column column'>
             <div className='column__title'>
                 <p>{title}</p>
             </div>
 			<div className='cards'>
-				{children}
+				{cards.map(card => <Card key={card.id} card={card} />)}
             </div>
         </div>
     );
