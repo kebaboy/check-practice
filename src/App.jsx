@@ -1,7 +1,7 @@
 import "./App.css";
-import PopExit from "./components/popups/PopUser/PopUser";
-import PopNewCard from "./components/popups/PopNewCard/PopNewCard";
-import PopBrowse from "./components/popups/PopBrowse/PopBrowse";
+import PopExit from "./components/Popups/PopUser/PopUser";
+import PopNewCard from "./components/Popups/PopNewCard/PopNewCard";
+import PopBrowse from "./components/Popups/PopBrowse/PopBrowse";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 function App() {
